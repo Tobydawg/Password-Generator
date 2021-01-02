@@ -1,14 +1,31 @@
 // Assignment code here
-let length = window.prompt("how many characters would you like your password to be? you can choose between 8 and 128");
-let type = window.prompt("Choose character type: special, numeric, uppercase, lowercase");
+let length = number(prompt("how many characters would you like your password to be? you can choose between 8 and 128"));
+let charType = prompt("Choose character type: special, numeric, uppercase, lowercase");
 
 
  
 
 
-function getData(isUpperCase, isLowerCase, isNumerical, isSpecial){
-    if
+function getData(){
+    if(charType.toLowerCase ==="lowercase")
+    {
+        charSet ="abcdefghijklmnopqrstuvwxyz";
+    }
 
+    else if(charType.toLowerCase ==="uppercase")
+    {
+        charSet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    }
+
+    else if(charType.toLowerCase ==="numeric")
+    {
+        charSet ="1234567890";
+    }
+
+    else if(charType.toLowerCase ==="special")
+    {
+        charSet ="!@#$%^&*()_+-=";
+    }
 
  
   
