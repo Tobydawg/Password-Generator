@@ -1,6 +1,6 @@
 // Assignment code here
-let length = prompt("how many characters would you like your password to be? you can choose between 8 and 128 (use a comma and a space after each word) WARNING: some combinations will not work!");
-let charType = prompt("Choose character type: special, numeric, uppercase, lowercase");
+let length = prompt("how many characters would you like your password to be? you can choose between 8 and 128 ");
+let charType = prompt("Choose character type: special, numeric, uppercase, lowercase. (use a comma and a space after each word) WARNING: some combinations will not work!");
 
 
  
@@ -129,6 +129,10 @@ function generatePassword(){
     }
 
     //quadruple selection combo
+    else if(charTypeLower ==="numeric, " + "uppercase, " + "special, " + "lowercase")
+    {
+        charSet ="abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    }
 
     else if(charTypeLower ==="lowercase, " + "special, " + "uppercase, " + "numeric")
     {
@@ -167,6 +171,11 @@ function generatePassword(){
     {
         charSet ="abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
     }
+
+    else if(charTypeLower ==="numeric, " + "special, " + "uppercase, " + "lowercase")
+    {
+        charSet ="abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    }
     
     
     
@@ -178,7 +187,7 @@ function generatePassword(){
   }
   return retVal;
 }
-alert(generatePassword());
+
 
 
 // Get references to the #generate element
@@ -198,3 +207,4 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+writePassword()
